@@ -3,7 +3,9 @@
 /00_template
 /.idea
 *bash.exe*
-#/media
+media/
+static/img/
+seconddrive/static/
 #credentials.json
 original_credentials.json
 
@@ -12,7 +14,7 @@ original_credentials.json
 *.pot
 *.pyc
 __pycache__
-# db.sqlite3
+db.sqlite3
 
 
 # Backup files #
