@@ -3,9 +3,9 @@
 /00_template
 /.idea
 *bash.exe*
-media/
-static/img/
-seconddrive/static/
+/media
+/static/img
+/seconddrive/static
 #credentials.json
 original_credentials.json
 
