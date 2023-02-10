@@ -6,7 +6,7 @@
 /media
 /static/img
 /seconddrive/static
-#credentials.json
+credentials.json
 original_credentials.json
 
 # Django #

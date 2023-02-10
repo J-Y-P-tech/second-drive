@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = 'dashboard'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +39,8 @@ INSTALLED_APPS = [
     # Apps
     'pages.apps.PagesConfig',
     'bikes.apps.BikesConfig',
+    'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
 
 
     'django.contrib.admin',
@@ -146,3 +150,17 @@ STATICFILES_DIRS = [
 # Media Settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+import json
+credentials_file_path = os.path.join(BASE_DIR, 'credentials.json')
+open_file = open(credentials_file_path)
+json_data = json.load(open_file)
+
+# Email sending
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = json_data['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = json_data['EMAIL_HOST_PASSWORD']
+EMAIL_USE_TLS = True

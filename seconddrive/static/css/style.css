@@ -4317,7 +4317,7 @@ footer {
 /** Counters start **/
 .counters {
     padding: 80px 0 50px;
-    background: url(../img/car-6.jpg);
+    background: url(../img/bike-6.jpg);
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4357,7 +4357,7 @@ footer {
 /** Counters 2 start **/
 .counters-2 {
     padding: 100px 0 70px;
-    background: url(../img/car-7.jpg);
+    background: url(../img/bike-7.jpg);
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4479,7 +4479,7 @@ footer {
 /** Testimonial 2 start **/
 .testimonial-2 {
     opacity: 1;
-    background: rgba(0, 0, 0, 0.04) url(../img/car-10.jpg) top left repeat;
+    background: rgba(0, 0, 0, 0.04) url(../img/bike-10.jpg) top left repeat;
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4565,7 +4565,7 @@ footer {
 /** Testimonial 3 start **/
 .testimonial-3 {
     padding: 100px 0;
-    background: url(../img/car-10.jpg);
+    background: url(../img/bike-10.jpg);
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4892,7 +4892,7 @@ footer {
 
 /** Coming soon start **/
 .coming-soon {
-    background: rgba(0, 0, 0, 0.04) url(../img/car-1.jpg) top left repeat;
+    background: rgba(0, 0, 0, 0.04) url(../img/bike-1.jpg) top left repeat;
     background-size: cover;
     top: 0;
     width: 100%;
@@ -6068,7 +6068,7 @@ footer {
 
 /** Sub Banner start **/
 .sub-banner {
-    background: rgba(0, 0, 0, 0.04) url(../img/car-1.jpg) top left repeat;
+    background: rgba(0, 0, 0, 0.04) url(../img/bike-1.jpg) top left repeat;
     background-size: cover;
     height: 360px;
     background-position: center center;
@@ -6176,7 +6176,7 @@ footer {
 
 /** Details banner start **/
 .details-banner{
-    background: rgba(0, 0, 0, 0.04) url(../img/car-11.jpg) top left repeat;
+    background: rgba(0, 0, 0, 0.04) url(../img/bike-11.jpg) top left repeat;
     background-size: cover;
     height: 550px;
     background-position: center center;
