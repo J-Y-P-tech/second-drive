@@ -25,7 +25,7 @@ SECRET_KEY = '&jats@ov&#t#jjwszg_+x0)(gsdkv#ijxseqt1qvx0)egb&m^-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
@@ -33,15 +33,10 @@ LOGIN_REDIRECT_URL = 'dashboard'
 
 INSTALLED_APPS = [
 
-    'ckeditor',
-    'django.contrib.humanize',
-
-    # Apps
-    'pages.apps.PagesConfig',
     'bikes.apps.BikesConfig',
+    'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
     'contacts.apps.ContactsConfig',
-
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,6 +44,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'ckeditor',
+    'django.contrib.humanize',
+
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # Providers
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+
 ]
 
 MIDDLEWARE = [
@@ -151,8 +159,15 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+# Messages
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
 
 import json
+
 credentials_file_path = os.path.join(BASE_DIR, 'credentials.json')
 open_file = open(credentials_file_path)
 json_data = json.load(open_file)
@@ -164,3 +179,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = json_data['EMAIL_HOST_USER']
 EMAIL_HOST_PASSWORD = json_data['EMAIL_HOST_PASSWORD']
 EMAIL_USE_TLS = True
+
+SITE_ID = 1
